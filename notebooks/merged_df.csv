@@ -238,7 +238,7 @@ Season,Round,EventName,Abbreviation,TeamName,GridPosition,Q1_s,Q2_s,Q3_s,Positio
 2023,15,Singapore Grand Prix,BOT,Alfa Romeo,16.0,92.809,9999.0,9999.0,17.0
 2023,15,Singapore Grand Prix,OCO,Alpine,8.0,92.369,92.089,91.673,18.0
 2023,15,Singapore Grand Prix,TSU,AlphaTauri,15.0,91.991,9999.0,9999.0,19.0
-2023,15,Singapore Grand Prix,STR,Aston Martin,,93.397,9999.0,9999.0,
+2023,15,Singapore Grand Prix,STR,Aston Martin,0.0,93.397,9999.0,9999.0,0.0
 2023,16,Japanese Grand Prix,VER,Red Bull Racing,1.0,89.878,89.964,88.877,1.0
 2023,16,Japanese Grand Prix,NOR,McLaren,3.0,90.063,90.296,89.493,2.0
 2023,16,Japanese Grand Prix,PIA,McLaren,2.0,90.439,90.122,89.458,3.0
