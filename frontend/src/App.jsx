@@ -6,12 +6,12 @@ import PredictionTable from './components/PredictionTable'
 
 function App() {
   return (
-    <>
+    <div className="relative min-h-screen bg-gradient-to-b from-red-600 to-neutral-300">
       <Header />
       <RaceForm />
       <PredictButton />
       <PredictionTable />
-    </>
+    </div>
   )
  
 }
