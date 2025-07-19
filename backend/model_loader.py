@@ -1,42 +1,32 @@
 import joblib
 import os
 
-def load_model():
+def load_model(model_path=None, verbose=True):
     """
     Loads the pre-trained F1 Race Predictor model from a .joblib file.
 
+    Args:
+        model_path (str, optional): Custom path to the .joblib model file. 
+                                    If None, it uses the default path under ../models/.
+        verbose (bool): If True, prints status messages.
+
     Returns:
-        sklearn.ensemble.GradientBoostingRegressor: The loaded Gradient Boosting Regressor model,
-                                                  or None if the model file is not found.
+        sklearn.ensemble.GradientBoostingRegressor: The loaded model, or None if loading fails.
     """
-    # Define the directory where the model is saved
-    # This path is now relative to the location of this script.
-    # Assuming 'models' directory is one level up from the script, e.g.,
-    # F1-Predictor/
-    # ├── models/
-    # │   └── GradientBoosting_F1_Race_Predictor_model.joblib
-    # └── scripts/
-    #     └── model_loader.py
-    # If 'models' is in the same directory as this script, just use 'models'.
-    script_dir = os.path.dirname(__file__)
-    model_dir = os.path.join(script_dir, '..', 'models') # Go up one level, then into 'models'
-    model_filename = 'GradientBoosting_F1_Race_Predictor_model.joblib'
-    
-    # Construct the full path to the model file
-    full_model_path = os.path.join(model_dir, model_filename)
+    if model_path is None:
+        script_dir = os.path.dirname(__file__)
+        model_path = os.path.join(script_dir, '..', 'models', 'GradientBoosting_F1_Race_Predictor_model.joblib')
 
     try:
-        # Load the model using joblib
-        loaded_model = joblib.load(full_model_path)
-        print(f"Model '{model_filename}' loaded successfully from {full_model_path}.")
+        loaded_model = joblib.load(model_path)
+        if verbose:
+            print(f"✅ Model loaded successfully from: {model_path}")
         return loaded_model
     except FileNotFoundError:
-        print(f"Error: Model file not found at '{full_model_path}'.")
-        print("Please ensure the path is correct and the model has been saved.")
+        if verbose:
+            print(f"❌ Model file not found at: {model_path}")
         return None
     except Exception as e:
-        print(f"An unexpected error occurred while loading the model: {e}")
+        if verbose:
+            print(f"❌ Error loading model from {model_path}: {e}")
         return None
-
-
-
