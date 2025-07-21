@@ -6,17 +6,17 @@ export default function Header() {
     return (
         <>
             <header>
-                <div className="relative h-30 bg-zinc-900 flex items-center justify-center rounded-lg">
-                    <div className="relative left-30 flex items-center justify-center text-red-500 text-6xl font-bold ">
+                <div className="relative min-w-screen h-30 bg-zinc-900 flex items-center justify-center rounded-lg shadow-xl">
+                    <div className="relative left-30 flex items-center justify-center text-red-500 text-6xl font-extrabold font-serif">
                         F1 Predictor
                     </div>
-                    <div className="relative top-0 right-150 w-50 h-50 flex items-center justify-center hover:scale-105">
+                    <div className="relative top-0 right-150 w-50 h-50 flex items-center justify-center animate-pulse">
                         <img src={logo} />
                     </div>
                 </div>
             </header>
 
-            <div className="flex items-center justify-center mt-4 h-50">
+            <div className="flex items-center justify-center h-100 scale-120">
                 <img src={gif} alt="loading..." />
             </div>
         </>
