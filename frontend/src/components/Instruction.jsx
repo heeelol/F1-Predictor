@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Instruction() {
     return (
-      <div className="bg-white shadow-md rounded-2xl p-6 mb-6 max-w-3xl mx-auto text-gray-800">
+      <div className="bg-white shadow-md rounded-2xl p-6 mb-6 max-w-3xl mx-auto text-gray-800 z-1">
         <h2 className="text-2xl font-bold mb-4 text-center">
             🏎️ Welcome to the F1 Race Predictor!
         </h2>

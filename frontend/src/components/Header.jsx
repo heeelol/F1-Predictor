@@ -1,12 +1,12 @@
 import React from 'react'
 import logo from '../assets/f1Logo.png'
-import gif from '../assets/GStQ.gif'
+
 
 export default function Header() {
     return (
         <>
             <header>
-                <div className="relative min-w-screen h-30 bg-zinc-900 flex items-center justify-center rounded-lg shadow-xl">
+                <div className="relative min-w-screen h-30 bg-zinc-900 flex items-center justify-center rounded-lg shadow-xl z-1">
                     <div className="relative left-30 flex items-center justify-center text-red-500 text-6xl font-extrabold font-serif">
                         F1 Predictor
                     </div>
@@ -15,10 +15,6 @@ export default function Header() {
                     </div>
                 </div>
             </header>
-
-            <div className="flex items-center justify-center h-100 scale-120 max-w-screen">
-                <img className="opacity-20 min-w-screen max-h-85" src={gif} alt="loading..." />
-            </div>
         </>
     )
 }

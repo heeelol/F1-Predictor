@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import axios from 'axios'
+import Gif from './components/Gif'
 import Header from './components/Header'
 import Instruction from './components/Instruction'
 import RaceForm from './components/RaceForm'
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-red-600 to-neutral-300 flex flex-col items-center">
+      <Gif />
       <Header />
       <Instruction />
       <RaceForm onPredictionReceived={handlePredictionReceived} />

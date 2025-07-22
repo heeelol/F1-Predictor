@@ -51,7 +51,7 @@ export default function RaceForm( {onPredictionReceived} ) {
 
     return (
         <>
-            <section className="flex flex-col items-center justify-center bg-red-500 rounded-xl shadow-md p-6 w-full max-w-md mx-auto mb-6 space-y-4">
+            <section className="flex flex-col items-center justify-center bg-red-500 rounded-xl shadow-md p-6 w-full max-w-md mx-auto mb-6 space-y-4 z-1">
                 <h3 className="text-white font-bold text-xl">Select Race Details</h3>
 
                 <div className="flex flex-col w-full">
