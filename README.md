@@ -24,6 +24,9 @@ The F1 Race Predictor is a machine learning project designed to forecast Formula
 
 * **Efficient Data Handling:** Benefits from `fastf1`'s internal caching mechanism for faster data retrieval on subsequent requests for the same race data. In the event of cache failure, a csv with race and qualifying data from 2015 up to race 12 of 2025 is included under `notebooks`.
 
+## Video Demonstration
+* https://youtu.be/qfJKhu7rrgY
+
 ## Technologies Used
 
 ### Frontend
