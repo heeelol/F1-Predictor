@@ -64,30 +64,30 @@ export default function RaceForm( {onPredictionReceived} ) {
                     >
                         
                         <option value="">-- Select a Race --</option>
-                        <option value="bahrain">Bahrain Grand Prix</option>
-                        <option value="saudi_arabia">Saudi Arabian Grand Prix</option>
-                        <option value="australia">Australian Grand Prix</option>
-                        <option value="japan">Japanese Grand Prix</option>
-                        <option value="china">Chinese Grand Prix</option>
-                        <option value="miami">Miami Grand Prix</option>
-                        <option value="emilia_romagna">Emilia Romagna Grand Prix</option>
-                        <option value="monaco">Monaco Grand Prix</option>
-                        <option value="canada">Canadian Grand Prix</option>
-                        <option value="spain">Spanish Grand Prix</option>
-                        <option value="austria">Austrian Grand Prix</option>
-                        <option value="great_britain">British Grand Prix</option>
-                        <option value="hungary">Hungarian Grand Prix</option>
-                        <option value="belgium">Belgian Grand Prix</option>
-                        <option value="netherlands">Dutch Grand Prix</option>
-                        <option value="italy">Italian Grand Prix</option>
-                        <option value="azerbaijan">Azerbaijan Grand Prix</option>
-                        <option value="singapore">Singapore Grand Prix</option>
-                        <option value="usa">United States Grand Prix (Austin)</option>
-                        <option value="mexico">Mexican Grand Prix</option>
-                        <option value="brazil">Brazilian Grand Prix</option>
-                        <option value="las_vegas">Las Vegas Grand Prix</option>
-                        <option value="qatar">Qatar Grand Prix</option>
-                        <option value="abu_dhabi">Abu Dhabi Grand Prix</option>
+                        <option value="1">Australian Grand Prix</option>
+                        <option value="2">Chinese Grand Prix</option>
+                        <option value="3">Japanese Grand Prix</option>
+                        <option value="4">Bahrain Grand Prix</option>
+                        <option value="5">Saudi Arabian Grand Prix</option>
+                        <option value="6">Miami Grand Prix</option>
+                        <option value="7">Emilia Romagna Grand Prix</option>
+                        <option value="8">Monaco Grand Prix</option>
+                        <option value="9">Spanish Grand Prix</option>
+                        <option value="10">Canadian Grand Prix</option>
+                        <option value="11">Austrian Grand Prix</option>
+                        <option value="12">British Grand Prix</option>
+                        <option value="13">Belgian Grand Prix</option>
+                        <option value="14">Hungarian Grand Prix</option>
+                        <option value="15">Dutch Grand Prix</option>
+                        <option value="16">Italian Grand Prix</option>
+                        <option value="17">Azerbaijan Grand Prix</option>
+                        <option value="18">Singapore Grand Prix</option>
+                        <option value="19">United States Grand Prix (Austin)</option>
+                        <option value="20">Mexican Grand Prix</option>
+                        <option value="21">Brazilian Grand Prix</option>
+                        <option value="22">Las Vegas Grand Prix</option>
+                        <option value="23">Qatar Grand Prix</option>
+                        <option value="24">Abu Dhabi Grand Prix</option>
                     </select>
                 </div>
             </section>

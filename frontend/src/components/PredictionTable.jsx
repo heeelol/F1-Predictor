@@ -2,14 +2,6 @@ import {useEffect, useState} from 'react'
 import axios from 'axios'
 
 
-// Sample data to be replaced with backend
-const sampleData = [
-  { pos: 1, driver: 'Lewis Hamilton', team: 'Mercedes', points: 25 },
-  { pos: 2, driver: 'Max Verstappen', team: 'Red Bull', points: 18 },
-  { pos: 3, driver: 'Charles Leclerc', team: 'Ferrari', points: 15 },
-]
-
-
 
 export default function PredictionTable({ data }) {
 
