@@ -6,19 +6,10 @@ import os
 import time
 import sys
 
-fastf1.set_log_level('ERROR')
-#fastf1.Cache.enable_cache('./cache') Commented out since we experience caching issues
-print("\nFastF1 log level set to ERROR. FastF1 cache enabled.")
-# Adjust sys.path to ensure modules in 'backend' are found
-script_dir = os.path.dirname(__file__)
-backend_dir = os.path.abspath(os.path.join(script_dir, '..', 'backend'))
-if backend_dir not in sys.path:
-    sys.path.append(backend_dir)
-# Import the preprocessor and model loader
-from preprocessing import preprocess_input # Import your preprocessing function
-from model_loader import load_model  
+
 
 def get_name(year, round):
+
     try:
         sess = fastf1.get_session(year, round, 'Q')
         sess.load(telemetry=False, laps=True, weather=False)
@@ -57,6 +48,19 @@ def format_prediction_output(merged_df):
     return rankings
 
 def get_predictions(year, round):
+
+    fastf1.set_log_level('ERROR')
+    #fastf1.Cache.enable_cache('./cache') Commented out since we experience caching issues
+    print("\nFastF1 log level set to ERROR. FastF1 cache enabled.")
+    # Adjust sys.path to ensure modules in 'backend' are found
+    script_dir = os.path.dirname(__file__)
+    backend_dir = os.path.abspath(os.path.join(script_dir, '..', 'backend'))
+    if backend_dir not in sys.path:
+        sys.path.append(backend_dir)
+    # Import the preprocessor and model loader
+    from preprocessing import preprocess_input # Import your preprocessing function
+    from model_loader import load_model  
+
     quali_session = fastf1.get_session(year, round, 'Q')
     quali_session.load(telemetry=False, laps=False, weather=False) 
 
@@ -87,7 +91,8 @@ def get_predictions(year, round):
 
     preprocessed_data = preprocess_input(results_df)
     preprocessed_data = preprocessed_data.drop('Position', axis=1)
-    model = load_model(os.path.join('models', 'V1_GradientBoosting_F1_Race_Predictor_model.joblib'), verbose=True)
+    model_path = os.path.join(backend_dir, '../models', 'V1_GradientBoosting_F1_Race_Predictor_model.joblib')
+    model = load_model(model_path, verbose=True)
     predictions = model.predict(preprocessed_data)
 
     new_df = results_df.copy()[['Abbreviation', 'TeamName']]

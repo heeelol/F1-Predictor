@@ -7,19 +7,19 @@ export default function PredictionTable({ data }) {
 
   const teamColors = {
     "Mercedes": "text-cyan-300",
-    "Red Bull": "text-blue-400",
+    "Red Bull Racing": "text-blue-400",
     "Ferrari": "text-red-400",
     "McLaren": "text-orange-500",
     "Alpine": "text-blue-500",
     "Aston Martin": "text-green-500",
     "Racing Bulls": "text-blue-300",
-    "Haas": "text-gray-500",
+    "Haas F1 Team": "text-gray-500",
     "Williams": "text-blue-700",
     "Kick Sauber": "text-green-300",
 }
 
   return (
-    <div className="p-6 sm:p-10">
+       <div className="p-6 sm:p-10">
       <h1 className="font-serif text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-red-400 via-red-500 to-stone-500 mb-12 drop-shadow-2xl tracking-wide text-center">
         Prediction Results
       </h1>
