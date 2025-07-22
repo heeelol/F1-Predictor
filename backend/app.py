@@ -9,6 +9,8 @@ def predict():
     data = request.json
     race = data['race']
     
+
+    #Replace this with the data from the ML model
     prediction_result = {
         'race': race,
         'prediction': f'Prediction for {race} completed!',

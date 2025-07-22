@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export default function RaceForm( {onPredictionReceived} ) {
 
-     const [data, setData] = useState('')
+    const [data, setData] = useState('')
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
 
