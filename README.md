@@ -26,6 +26,23 @@ The F1 Race Predictor is a machine learning project designed to forecast Formula
 
 ## Technologies Used
 
+### Frontend
+* **Language**: JavaScript (ES6+)
+* **Bundler**: Vite – For fast development and optimized builds.
+
+* **Core Libraries**:
+   * React.js: For building interactive and component-based user interfaces.
+   * React DOM: For rendering React components to the browser.
+
+* **Styling**:
+   * Tailwind CSS: Utility-first CSS framework for rapid UI development.
+   * Autoprefixer: Adds vendor prefixes to CSS automatically.
+
+ * **HTTP Client**:
+    * Axios: For making HTTP requests to the backend API.
+
+### Backend
+
 * **Language:** Python 3
 
 * **Core Libraries:**
@@ -45,12 +62,28 @@ To get this project up and running on your local machine, follow these steps:
     cd F1-Race-Predictor
     ```
 
-2.  **Create a Virtual Environment (Recommended):**
+### Frontend
+
+2. **Install Dependencies**
     ```bash
+    cd frontend
+    npm install
+    ```
+
+3. **Start the frontend development server (from the frontend directory)r**
+    ```bash
+    npm run dev
+    ```
+
+### Backend
+
+4.  **Create a Virtual Environment (Recommended):**
+    ```bash
+    cd ../backend
     python -m venv venv
     ```
 
-3.  **Activate the Virtual Environment:**
+5.  **Activate the Virtual Environment:**
     * **Windows:**
         ```bash
         .\venv\Scripts\activate
@@ -60,14 +93,19 @@ To get this project up and running on your local machine, follow these steps:
         source venv/bin/activate
         ```
 
-4.  **Install Dependencies:**
+6.  **Install Dependencies:**
     In the `requirements.txt` file contains the necessary dependencies and their respective versions used for this project. 
     ```bash
     pip install -r requirements.txt
     ```
 
-5.  **Model and Preprocessor Files:**
-    Ensure your trained model (`V1_GradientBoosting_F1_Race_Predictor_model.joblib` or `V2_GradientBoosting_F1_Race_Predictor_model.joblib`), the `one_hot_encoder.joblib`, and `training_feature_names.joblib` are located in the **`models/`** directory at the root level of your project.
+7. **Start the backend server (from the backend directory)**
+     ```bash
+    py app.py
+    ```
+
+8.  **Model and Preprocessor Files:**
+    Ensure the trained model (`V1_GradientBoosting_F1_Race_Predictor_model.joblib` or `V2_GradientBoosting_F1_Race_Predictor_model.joblib`), the `one_hot_encoder.joblib`, and `training_feature_names.joblib` are located in the **`models/`** directory at the root level of your project.
 
     Your project structure should look something like this:
 
