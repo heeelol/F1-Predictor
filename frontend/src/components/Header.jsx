@@ -16,7 +16,7 @@ export default function Header() {
                 </div>
             </header>
 
-            <div className="flex items-center justify-center h-100 scale-120">
+            <div className="flex items-center justify-center h-100 scale-120 max-w-screen">
                 <img src={gif} alt="loading..." />
             </div>
         </>

@@ -1,4 +1,6 @@
-import React from 'react'
+import {useEffect, useState} from 'react'
+import axios from 'axios'
+
 
 // Sample data to be replaced with backend
 const sampleData = [
@@ -7,7 +9,11 @@ const sampleData = [
   { pos: 3, driver: 'Charles Leclerc', team: 'Ferrari', points: 15 },
 ]
 
-const teamColors = {
+
+
+export default function PredictionTable({ data }) {
+
+  const teamColors = {
     "Mercedes": "text-cyan-300",
     "Red Bull": "text-blue-400",
     "Ferrari": "text-red-400",
@@ -20,10 +26,9 @@ const teamColors = {
     "Kick Sauber": "text-green-300",
 }
 
-export default function PredictionTable({ data = sampleData }) {
   return (
     <div className="p-6 sm:p-10">
-      <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-red-400 via-red-500 to-stone-500 mb-12 drop-shadow-2xl tracking-wide text-center">
+      <h1 className="font-serif text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-red-400 via-red-500 to-stone-500 mb-12 drop-shadow-2xl tracking-wide text-center">
         Prediction Results
       </h1>
 
