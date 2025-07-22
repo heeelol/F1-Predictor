@@ -1,10 +1,10 @@
 # F1 Race Predictor
 
-## 🏁 Project Overview
+## Project Overview
 
 The F1 Race Predictor is a machine learning project designed to forecast Formula 1 race finishing positions. By leveraging pre-race data, primarily from the qualifying session, this model aims to provide data-driven insights into potential race outcomes, offering a unique perspective for F1 enthusiasts and analysts. 
 
-## ✨ Features
+## Features
 
 * **Real-time Data Fetching:** Utilizes the `fastf1` API to retrieve the latest qualifying data for any specified 2025 Grand Prix.
 
@@ -24,7 +24,7 @@ The F1 Race Predictor is a machine learning project designed to forecast Formula
 
 * **Efficient Data Handling:** Benefits from `fastf1`'s internal caching mechanism for faster data retrieval on subsequent requests for the same race data. In the event of cache failure, a csv with race and qualifying data from 2015 up to race 12 of 2025 is included under `notebooks`.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **Language:** Python 3
 
@@ -35,13 +35,13 @@ The F1 Race Predictor is a machine learning project designed to forecast Formula
     * `scikit-learn`: For machine learning model search and implementation (specifically `GradientBoostingRegressor`).
     * `joblib`: For efficient serialization and loading of the trained model.
 
-## 🚀 Setup and Installation
+## Setup and Installation
 
 To get this project up and running on your local machine, follow these steps:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/heeelol/F1-Race-Predictor] (https://github.com/heeelol/F1-Race-Predictor)
+    git clone https://github.com/heeelol/F1-Race-Predictor
     cd F1-Race-Predictor
     ```
 
@@ -90,7 +90,7 @@ To get this project up and running on your local machine, follow these steps:
     └── requirements.txt
     ```
 
-## 🚀 Usage
+## Usage
 
 The core functionality is exposed via the `get_race_predictions_json` function, which is likely located in `backend/app.py`. This function takes the `year` and `round_number` of an F1 event and returns a JSON string with the predicted results.
 
